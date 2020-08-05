@@ -10,4 +10,6 @@ return [
     
     'password' => env('DIRECTADMIN_PASSWORD'),
 
+    'serverIp' => env('DIRECTADMIN_SERVERIP'),
+
 ];
