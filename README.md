@@ -103,3 +103,15 @@ $result = DirectAdmin::unsuspendAccount($userToUnsuspend);
 
 dd($result);
 ```
+
+## Contributions
+
+As the DirectAdmin API keeps expanding pull requests are welcomed, as are requests for specific functionality. Pull requests should in general include proper unit tests for the implemented or corrected functions.
+
+For more information about unit testing see the `README.md` in the tests folder.
+
+## Legal
+
+This software was developed for internal use. It is shared with the general public under the permissive MIT license, without any guarantee of fitness for any particular purpose. Refer to the included LICENSE file for more details.
+
+The project is not in any way affiliated with JBMC Software or its employees.
