@@ -1,6 +1,6 @@
 <?php
 
-namespace Gegeriyadi\DirectAdmin;
+namespace Gegeriyadi\LaravelDirectAdmin;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;

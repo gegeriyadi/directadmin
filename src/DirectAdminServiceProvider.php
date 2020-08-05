@@ -1,6 +1,6 @@
 <?php
 
-namespace Gegeriyadi\DirectAdmin;
+namespace Gegeriyadi\LaravelDirectAdmin;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,7 @@ class DirectAdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('gegeriyadi-directadmin', function() {
+        $this->app->bind('gegeriyadi-laravel-directadmin', function() {
             return new DirectAdmin();
         });
     }

@@ -15,7 +15,7 @@ composer require gegeriyadi/directadmin
 don't forget to publish config file, with this command
 
 ```bash
-php artisan vendor:publish --provider="Gegeriyadi\DirectAdmin\DirectAdminServiceProvider"
+php artisan vendor:publish --provider="Gegeriyadi\LaravelDirectAdmin\DirectAdminServiceProvider"
 ```
 
 ### step 3. add your directadmin credential on .env file
@@ -43,7 +43,7 @@ code example:
 ### get user list
 
 ```php
-use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
 
 $result = DirectAdmin::getUserList();
 
@@ -53,7 +53,7 @@ dd($result);
 ### create new account
 
 ```php
-use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
 
 $domain = 'domain.com';
 $username = 'username';
@@ -71,7 +71,7 @@ dd($result);
 ### delete an account
 
 ```php
-use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
 
 $userToDelete = 'usertodelete';
 
@@ -83,7 +83,7 @@ dd($result);
 ### suspend an account
 
 ```php
-use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
 
 $userToSuspend = 'usertosuspend';
 
@@ -95,7 +95,7 @@ dd($result);
 ### unsuspend an account
 
 ```php
-use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
 
 $userToUnsuspend = 'usertounsuspend';
 

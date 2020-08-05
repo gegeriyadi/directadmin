@@ -1,5 +1,5 @@
 {
-    "name": "gegeriyadi/directadmin",
+    "name": "gegeriyadi/laravel-directadmin",
     "description": "Simple wrapper for directadmin api.",
     "require": {
         "guzzlehttp/guzzle": "^7.1@dev"
@@ -14,13 +14,13 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Gegeriyadi\\DirectAdmin\\": "src/"
+            "Gegeriyadi\\LaravelDirectAdmin\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Gegeriyadi\\DirectAdmin\\DirectAdminServiceProvider"
+                "Gegeriyadi\\LaravelDirectAdmin\\DirectAdminServiceProvider"
             ]
         }
     }

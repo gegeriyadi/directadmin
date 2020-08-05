@@ -1,8 +1,8 @@
 <?php
 
-namespace Gegeriyadi\DirectAdmin;
+namespace Gegeriyadi\LaravelDirectAdmin;
 
-use Gegeriyadi\DirectAdmin\DirectAdminApi;
+use Gegeriyadi\LaravelDirectAdmin\DirectAdminApi;
 
 class DirectAdmin
 {
