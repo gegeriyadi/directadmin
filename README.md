@@ -2,10 +2,27 @@
 
 Support Laravel 7.x
 
-## Installing
+## Installation
 
-`composer require gegeriyadi/directadmin`
+```
+composer require gegeriyadi/directadmin
+```
 
-## How To Use
+## Usage
 
-cooming soon..
+code example 
+
+### get user list
+
+```php
+use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+
+$result = DirectAdmin::getUserList();
+dd($result);
+```
+
+### create new account
+
+### suspend an account
+
+### unsuspend an account
