@@ -20,15 +20,16 @@ trait DirectAdminApi
         $this->password = config('directadmin.password');
     }
 
-    public function process($uri)
+    public function process($method, $uri, $query = null)
 	{
         $client = new Client([
             'base_uri' => $this->base_uri
         ]);
         
         try {
-            $response = $client->request('GET', $uri, [
-                'auth' => [$this->username, $this->password]
+            $response = $client->request($method, $uri, [
+                'auth' => [$this->username, $this->password],
+                'query' => $query
             ]);
 
             $body = $response->getBody();
