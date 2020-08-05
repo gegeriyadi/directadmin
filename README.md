@@ -46,11 +46,60 @@ code example:
 use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
 
 $result = DirectAdmin::getUserList();
+
 dd($result);
 ```
 
 ### create new account
 
+```php
+use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+
+$domain = 'domain.com';
+$username = 'username';
+$passwd = 'userpass';
+$package = 'yourhostpackage';
+$email = 'usermail@gmail.com';
+
+$result = DirectAdmin::createNewAccount(
+    $domain, $username, $passwd, $package, $email
+);
+
+dd($result);
+```
+
+### delete an account
+
+```php
+use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+
+$userToDelete = 'usertodelete';
+
+$result = DirectAdmin::deleteAccount($userToDelete);
+
+dd($result);
+```
+
 ### suspend an account
 
+```php
+use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+
+$userToSuspend = 'usertosuspend';
+
+$result = DirectAdmin::suspendAccount($userToSuspend);
+
+dd($result);
+```
+
 ### unsuspend an account
+
+```php
+use Gegeriyadi\DirectAdmin\Facades\DirectAdmin;
+
+$userToUnsuspend = 'usertounsuspend';
+
+$result = DirectAdmin::unsuspendAccount($userToUnsuspend);
+
+dd($result);
+```
