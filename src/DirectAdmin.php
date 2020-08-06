@@ -3,6 +3,7 @@
 namespace Gegeriyadi\LaravelDirectAdmin;
 
 use Gegeriyadi\LaravelDirectAdmin\DirectAdminApi;
+use Gegeriyadi\LaravelDirectAdmin\NewAccountParameter;
 
 class DirectAdmin
 {
@@ -15,17 +16,17 @@ class DirectAdmin
         return $result['list'];
     }
 
-    public function createNewAccount($domain, $username, $passwd, $package, $email)
+    public function createNewAccount(NewAccountParameter $newAccount)
     {
         $query = [
             'action' => 'create',
             'add' => 'Submit',
-            'username' => $username,
-            'email' => $email,
-            'passwd' => $passwd,
-            'passwd2' => $passwd,
-            'domain' => $domain,
-            'package' => $package,
+            'username' => $newAccount->username,
+            'email' => $newAccount->email,
+            'passwd' => $newAccount->passwd,
+            'passwd2' => $newAccount->passwd,
+            'domain' => $newAccount->domain,
+            'package' => $newAccount->package,
             'ip' => config('directadmin.serverIp'),
             'notify' => 'no'
         ];

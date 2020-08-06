@@ -4,21 +4,21 @@ Support Laravel 7.x
 
 ## Installation
 
-### step 1. install the package
+### Step 1. install the package
 
 ```
 composer require gegeriyadi/directadmin
 ```
 
-### step 2. publish config file
+### Step 2. publish config file
 
-don't forget to publish config file, with this command
+publish config file with this command
 
 ```bash
 php artisan vendor:publish --provider="Gegeriyadi\LaravelDirectAdmin\DirectAdminServiceProvider"
 ```
 
-### step 3. add your directadmin credential on .env file
+### Step 3. add your directadmin credential on .env file
 
 ```env
 DIRECTADMIN_HOSTNAME=your-directadmin-hostname
@@ -28,7 +28,7 @@ DIRECTADMIN_PASSWORD="your-directadmin-password"
 DIRECTADMIN_SERVERIP=your-server-ip
 ```
 
-### step 4. clear config cache
+### Step 4. clear config cache
 
 and then don't forget to clear the config cache file with this command
 
@@ -40,7 +40,7 @@ php artisan config:cache
 
 code example:
 
-### get user list
+### Get user list
 
 ```php
 use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
@@ -50,25 +50,27 @@ $result = DirectAdmin::getUserList();
 dd($result);
 ```
 
-### create new account
+### Create new account
+
+To create new account you must add `Gegeriyadi\LaravelDirectAdmin\NewAccountParameter` class for pass the new account parameter.
 
 ```php
 use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
+use Gegeriyadi\LaravelDirectAdmin\NewAccountParameter;
 
-$domain = 'domain.com';
-$username = 'username';
-$passwd = 'userpass';
-$package = 'yourhostpackage';
-$email = 'usermail@gmail.com';
+$newAccount = new NewAccountParameter();
+$newAccount->domain = 'new-domain.com';
+$newAccount->username = 'new-username';
+$newAccount->passwd = 'new-userpass';
+$newAccount->package = 'yourhostpackage';
+$newAccount->email = 'usermail@gmail.com';
 
-$result = DirectAdmin::createNewAccount(
-    $domain, $username, $passwd, $package, $email
-);
+$result = DirectAdmin::createNewAccount($newAccount);
 
 dd($result);
 ```
 
-### delete an account
+### Delete an account
 
 ```php
 use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
@@ -80,7 +82,7 @@ $result = DirectAdmin::deleteAccount($userToDelete);
 dd($result);
 ```
 
-### suspend an account
+### Suspend an account
 
 ```php
 use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
@@ -92,7 +94,7 @@ $result = DirectAdmin::suspendAccount($userToSuspend);
 dd($result);
 ```
 
-### unsuspend an account
+### Unsuspend an account
 
 ```php
 use Gegeriyadi\LaravelDirectAdmin\Facades\DirectAdmin;
